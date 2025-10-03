@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Mobile Internet Hub</title>
+    <style>
+        :root {
+            --bg-color: #0a1525;
+            --card-bg: rgba(15, 25, 45, 0.9);
+            --accent: #36d1dc;
+            --accent-dark: #5b86e5;
+            --text-color: #eaf1ff;
+            --muted-text: #9bb0d8;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #0a1525 0%, #04101f 100%);
+            color: var(--text-color);
+        }
+
+        header {
+            padding: 2.5rem 5vw 1rem;
+            background: rgba(4, 16, 31, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(54, 209, 220, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 0.05em;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            color: var(--muted-text);
+        }
+
+        main {
+            padding: 2rem 5vw 4rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 2rem;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(91, 134, 229, 0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 28px 60px rgba(10, 21, 37, 0.45);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        .card p {
+            margin: 0;
+            line-height: 1.6;
+            color: var(--muted-text);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: #04101f;
+            border-radius: 999px;
+            padding: 0.35rem 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.75rem;
+        }
+
+        .login-panel {
+            background: linear-gradient(160deg, rgba(54, 209, 220, 0.12), rgba(91, 134, 229, 0.05));
+            border: 1px solid rgba(54, 209, 220, 0.25);
+        }
+
+        .login-panel code {
+            background: rgba(10, 21, 37, 0.65);
+            padding: 0.4rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: var(--accent);
+        }
+
+        .note {
+            font-size: 0.9rem;
+            color: #7fa0cf;
+        }
+
+        ul, ol {
+            margin: 0;
+            padding-left: 1.1rem;
+            color: var(--muted-text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(54, 209, 220, 0.4);
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-dark);
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding: 2.5rem 5vw;
+            background: rgba(4, 16, 31, 0.85);
+            border-top: 1px solid rgba(91, 134, 229, 0.15);
+            text-align: center;
+            color: var(--muted-text);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            main {
+                padding: 1.5rem 6vw 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="badge">Members Area</span>
+        <h1>Satellite Mobile Internet Knowledge Center</h1>
+        <p>Exclusive resources on SIM technology, satellite-based connectivity, and Starlink's evolving constellation.</p>
+    </header>
+
+    <main>
+        <section class="card login-panel">
+            <h2>Access Credentials</h2>
+            <p>Use the following credentials to access the community tools, satellite coverage maps, and advanced configuration guides.</p>
+            <p><strong>Email:</strong> <code>usuario@demo.com</code></p>
+            <p><strong>Password:</strong> <code>usuario123</code></p>
+            <p class="note">Keep these credentials secure. Rotate them regularly to maintain account integrity.</p>
+        </section>
+
+        <section class="card">
+            <h2>Featured Blog Series</h2>
+            <ul>
+                <li><strong>Satellite SIM 101:</strong> Demystifying multi-IMSI profiles for global IoT deployments.</li>
+                <li><strong>Orbit Insights:</strong> How LEO satellite networks deliver sub-30ms latency.</li>
+                <li><strong>Starlink Field Notes:</strong> Real-world performance benchmarks from maritime and aviation partners.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Reference Library</h2>
+            <p>Curated documentation and standards to build resilient satellite backhaul solutions:</p>
+            <ol>
+                <li>3GPP Release 17 highlights for NTN (Non-Terrestrial Networks).</li>
+                <li>ITU recommendations on satellite spectrum allocation and interference mitigation.</li>
+                <li>Starlink API quickstart for fleet management and remote diagnostics.</li>
+                <li>Global SIM provisioning checklist with eSIM activation workflows.</li>
+            </ol>
+        </section>
+
+        <section class="card">
+            <h2>Latest Starlink Headlines</h2>
+            <p>Stay in sync with launches, coverage expansion, and regulatory updates impacting Starlink operations worldwide:</p>
+            <ul>
+                <li>Starlink achieves seamless roaming across 60+ countries with new inter-satellite laser links.</li>
+                <li>FCC grants approval for next-generation V2 Mini satellites enhancing polar coverage.</li>
+                <li>Partnership spotlight: Starlink collaborates with emergency services for disaster recovery.</li>
+                <li>Orbital debris mitigation roadmap featuring autonomous collision avoidance protocols.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Community Lounge</h2>
+            <p>Connect with fellow satellite connectivity pioneers:</p>
+            <ul>
+                <li>Join weekly AMAs with Starlink network engineers.</li>
+                <li>Submit case studies on remote site deployments and share best practices.</li>
+                <li>Access premium tutorials on optimizing satellite ground station alignment.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        © 2024 Satellite Mobile Internet Hub — Empowering global connectivity beyond terrestrial limits.
+    </footer>
+</body>
+</html>
